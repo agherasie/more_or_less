@@ -13,9 +13,16 @@ class InputField extends StatelessWidget {
       onSubmitted: (text) => readNumber(int.parse(myController.text)),
       controller: myController,
       decoration: const InputDecoration(
-        border: OutlineInputBorder(),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.black),
+        ),
+        border: OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.black),
+        ),
         label: Center(
-          child: Text("Input a number between 1 and 100"),
+          child: Text(
+            "Input a number between 1 and 100",
+          ),
         ),
       ),
     );

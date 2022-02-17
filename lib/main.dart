@@ -34,6 +34,18 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  Color _colorHint() {
+    int difference = guess - number;
+    difference = difference.abs();
+    if (guess == -1 || guess == number) return Colors.white;
+    if (difference < 5) return Colors.deepOrange[900] as Color;
+    if (difference < 10) return Colors.deepOrange[500] as Color;
+    if (difference < 20) return Colors.deepOrange[300] as Color;
+    if (difference < 40) return Colors.indigoAccent[200] as Color;
+    if (difference > 40) return Colors.indigoAccent[100] as Color;
+    return Colors.white;
+  }
+
   int number = 42;
   String resultText = "Choose a number";
   int guess = -1;
@@ -41,6 +53,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(scaffoldBackgroundColor: _colorHint()),
       home: Scaffold(
         appBar: AppBar(
           title: Text("More or less"),

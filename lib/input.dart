@@ -23,7 +23,7 @@ class Input extends StatelessWidget {
       children: [
         Result(resultText),
         Container(
-          margin: EdgeInsets.all(10),
+          margin: const EdgeInsets.all(10),
           width: 400.0,
           child: InputField(readNumber),
         ),
