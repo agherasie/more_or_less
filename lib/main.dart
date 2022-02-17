@@ -30,12 +30,13 @@ class _MyAppState extends State<MyApp> {
       Random random = new Random();
       number = 1 + random.nextInt(100 - 1);
       resultText = "Choose a number";
+      guess = -1;
     });
   }
 
   int number = 42;
   String resultText = "Choose a number";
-  int guess = 100;
+  int guess = -1;
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "./result.dart";
 import "./input_field.dart";
+import './hint.dart';
 
 String decideResult(int input, int number) {
   if (number > input) return "More";
@@ -26,7 +27,7 @@ class Input extends StatelessWidget {
           width: 400.0,
           child: InputField(readNumber),
         ),
-        Result(guess.toString()),
+        Hint(guess),
       ],
     );
   }
