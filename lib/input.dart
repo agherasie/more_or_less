@@ -18,10 +18,11 @@ class Input extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Result(resultText),
         Container(
-          margin: const EdgeInsets.all(10.0),
+          margin: EdgeInsets.all(10),
           width: 400.0,
           child: InputField(readNumber),
         ),

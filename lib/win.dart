@@ -8,6 +8,7 @@ class WinScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Result("You won, you're awesome !"),
         ElevatedButton(
